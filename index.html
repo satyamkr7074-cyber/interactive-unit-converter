@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Unit Converter using HTML, CSS and JavaScript">
+    <title>Interactive Unit Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>Interactive Unit Converter</h1>
+            <p>Convert units quickly, accurately, and easily.</p>
+        </header>
+
+        <main class="converter-card">
+
+            <!-- Category -->
+            <div class="form-group">
+                <label for="category">Conversion Category</label>
+                <select id="category">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="speed">Speed</option>
+                    <option value="area">Area</option>
+                    <option value="time">Time</option>
+                </select>
+            </div>
+
+            <div class="conversion-row">
+
+                <!-- From -->
+                <div class="form-group">
+                    <label for="fromUnit">From</label>
+                    <select id="fromUnit"></select>
+                </div>
+
+                <button class="swap-btn" id="swapBtn" title="Swap Units">
+                    ⇄
+                </button>
+
+                <!-- To -->
+                <div class="form-group">
+                    <label for="toUnit">To</label>
+                    <select id="toUnit"></select>
+                </div>
+
+            </div>
+
+            <!-- Input -->
+            <div class="form-group">
+                <label for="inputValue">Enter Value</label>
+                <input
+                    type="number"
+                    id="inputValue"
+                    placeholder="Enter a value"
+                    step="any"
+                >
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button id="convertBtn" class="convert-btn">
+                    Convert
+                </button>
+
+                <button id="clearBtn" class="clear-btn">
+                    Clear
+                </button>
+            </div>
+
+            <!-- Error Message -->
+            <p id="errorMessage" class="error-message"></p>
+
+            <!-- Result -->
+            <div class="result-box">
+                <span class="result-label">Converted Result</span>
+                <div id="result">0</div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Built with HTML, CSS &amp; Vanilla JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
